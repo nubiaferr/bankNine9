@@ -1,0 +1,68 @@
+package Applications;
+
+import java.util.Scanner;
+
+import Entities.ContaGeral;
+import Entities.ContaPoupanca;
+
+public class Teste {
+
+	public static void main(String[] args) {
+		Scanner leia = new Scanner (System.in);
+		ContaGeral contaMae = new ContaGeral("Conta Mãe", 000);
+		
+		do {
+			contaMae.mostraMenu();
+			contaMae.setEscolhaMenu(leia.nextInt());
+			
+			if (contaMae.getEscolhaMenu() == 1) {
+				ContaPoupanca contaP = new ContaPoupanca("CONTA POUPANÇA", 001, 14);
+				
+				for (int i = 1; i <= 10; i++) {
+					contaP.mostraHeader();
+					contaP.mostraCredDeb();
+					contaP.setEscolhaCredDeb(leia.nextInt());
+					
+					if(contaP.getEscolhaCredDeb() == 1) {
+						System.out.println("Digite o valor desejado: ");
+						contaP.creditar(leia.nextDouble());
+					} else if (contaP.getEscolhaCredDeb() == 2) {
+						System.out.println("Digite o valor desejado: ");
+						contaP.debitar(leia.nextDouble());
+					} else {
+						System.out.println("Comando Inválido.");
+					}
+					contaP.perguntarDia();
+					contaP.setRespostaDia(leia.nextInt());
+					contaP.ajustarPoupanca();
+					
+					contaP.repeteOp();
+					contaP.setRespostaRepeteSN(leia.next());
+					
+					if (contaP.getRespostaRepeteSN().equals("N")) {
+						break;
+					}
+					
+				}
+				
+			} else if (contaMae.getEscolhaMenu() == 2) {
+				
+			} else if (contaMae.getEscolhaMenu() == 3) {
+				
+			} else if (contaMae.getEscolhaMenu() == 4) {
+				
+			} else if (contaMae.getEscolhaMenu() == 5) {
+				
+			} else if (contaMae.getEscolhaMenu() == 6) {
+				System.out.println("OPERAÇÃO FINALIZADA.");
+			} else {
+				System.out.println("Operação inválida.");
+			}
+			
+		} while (contaMae.getEscolhaMenu() != 6);
+		
+
+
+	}
+
+}
