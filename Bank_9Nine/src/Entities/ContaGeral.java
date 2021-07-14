@@ -146,11 +146,4 @@ public abstract class ContaGeral {
 		System.out.println("Digite a opção desejada: ");
 	}
 	
-	public void voltaMenu() {
-		if (this.getRespostaRepeteSN().toLowerCase().equals("n")) {
-			for (int i = 1; i < 2; i++) {
-				break;
-			}
-		}
-	}
 }

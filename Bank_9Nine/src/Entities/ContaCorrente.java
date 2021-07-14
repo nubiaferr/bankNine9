@@ -33,16 +33,7 @@ public class ContaCorrente extends ContaGeral {
 		System.out.println("SALDO: R$ "+this.getSaldo2());
 	}
 	
-	@Override
-	public void mostraCredDeb(){
-		System.out.println(" ");
-		System.out.println("-----------------------");
-		System.out.println("1 - Crédito");
-		System.out.println("2 - Débito");
-		System.out.println("-----------------------");
-		System.out.println("Digite a opção desejada: ");
-	}
-	
+		
 	@Override
 	public void creditar(double valor) {
 		if (valor <= 0) {
@@ -75,28 +66,13 @@ public class ContaCorrente extends ContaGeral {
 		System.out.println("Deseja repetir a operação? S/N:");
 	}
 	
-	@Override
-	public void mostraMenu(){
-		System.out.println("-------- BANK NINE9 ------");
-		System.out.println("---ATRIBUINDO EXPOENTE----");
-		System.out.println("-----AO SEU PATRIMÔNIO----");
-		System.out.println("-----------MENU-----------");
-		System.out.println("1 - Conta Poupança");
-		System.out.println("2 - Conta Corrente");
-		System.out.println("3 - Conta Especial");
-		System.out.println("4 - Conta Empresa");
-		System.out.println("5 - Conta Estudantil");
-		System.out.println("6 - Sair");
-		System.out.println("---------------------------");
-		System.out.println("Digite a opção desejada: ");
-	}
+	
 	
 	public void mostraCheque() {
 		this.setCheque(this.getCheque()-1);
 		this.setSaldo2(this.getSaldo2()-30.00);
 		System.out.println("Seu talão foi solicitado com sucesso");
 		System.out.println("Total de cheques disponíveis: "+this.getCheque());
-		//break;
 	}
 	
 	

@@ -33,9 +33,7 @@ public class CreditoEspecial extends ContaGeral {
 	public void setDiferenca(double diferenca) {
 		this.diferenca = diferenca;
 	}
-	
-	
-	
+		
 	public double getDiferenca2() {
 		return diferenca2;
 	}
@@ -54,15 +52,7 @@ public class CreditoEspecial extends ContaGeral {
 		System.out.println("CRÉDITO ESPECIAL: "+this.getLis());
 	}
 	
-	@Override
-	public void mostraCredDeb(){
-		System.out.println(" ");
-		System.out.println("-----------------------");
-		System.out.println("1 - Crédito");
-		System.out.println("2 - Débito");
-		System.out.println("-----------------------");
-		System.out.println("Digite a opção desejada: ");
-	}
+
 	
 	@Override
 	public void creditar(double valor) {
@@ -116,21 +106,6 @@ public class CreditoEspecial extends ContaGeral {
 		System.out.println("Deseja repetir a operação? S/N:");
 	}
 	
-	@Override
-	public void mostraMenu(){
-		System.out.println("-------- BANK NINE9 ------");
-		System.out.println("---ATRIBUINDO EXPOENTE----");
-		System.out.println("-----AO SEU PATRIMÔNIO----");
-		System.out.println("-----------MENU-----------");
-		System.out.println("1 - Conta Poupança");
-		System.out.println("2 - Conta Corrente");
-		System.out.println("3 - Conta Especial");
-		System.out.println("4 - Conta Empresa");
-		System.out.println("5 - Conta Estudantil");
-		System.out.println("6 - Sair");
-		System.out.println("---------------------------");
-		System.out.println("Digite a opção desejada: ");
-	}
 	
 	
 	

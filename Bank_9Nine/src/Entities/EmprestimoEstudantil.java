@@ -3,6 +3,7 @@ package Entities;
 public class EmprestimoEstudantil extends ContaGeral {
 	protected double saldo5;
 	private double emprestimoEstudante = 5000;
+	
 	public EmprestimoEstudantil(String tipo, int numero) {
 		super(tipo, numero);
 	}
@@ -40,15 +41,7 @@ public class EmprestimoEstudantil extends ContaGeral {
 		System.out.println("EMPRÉSTIMO DISPONÍVEL: R$"+this.getEmprestimoEstudante());
 	}
 	
-	@Override
-	public void mostraCredDeb(){
-		System.out.println(" ");
-		System.out.println("-----------------------");
-		System.out.println("1 - Crédito");
-		System.out.println("2 - Débito");
-		System.out.println("-----------------------");
-		System.out.println("Digite a opção desejada: ");
-	}
+
 	
 	@Override
 	public void creditar(double valor) {
@@ -83,21 +76,7 @@ public class EmprestimoEstudantil extends ContaGeral {
 		System.out.println("Deseja repetir a operação? S/N:");
 	}
 	
-	@Override
-	public void mostraMenu(){
-		System.out.println("-------- BANK NINE9 ------");
-		System.out.println("---ATRIBUINDO EXPOENTE----");
-		System.out.println("-----AO SEU PATRIMÔNIO----");
-		System.out.println("-----------MENU-----------");
-		System.out.println("1 - Conta Poupança");
-		System.out.println("2 - Conta Corrente");
-		System.out.println("3 - Conta Especial");
-		System.out.println("4 - Conta Empresa");
-		System.out.println("5 - Conta Estudantil");
-		System.out.println("6 - Sair");
-		System.out.println("---------------------------");
-		System.out.println("Digite a opção desejada: ");
-	}
+
 	
 	public void emprestimo(double valor) {
 		if (valor <= 0 ) {
