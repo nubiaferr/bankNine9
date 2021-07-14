@@ -8,8 +8,7 @@ public abstract class ContaGeral {
 	private String respostaRepeteSN;
 	private String tipo;
 	private int numero;
-	
-	
+		
 	public ContaGeral(double saldo, double credito, double debito, int escolhaCredDeb,
 			String respostaRepeteSN, String tipo, int numero) {
 		super();
@@ -22,13 +21,11 @@ public abstract class ContaGeral {
 		this.numero = numero;
 	}
 	
-	
 	public ContaGeral(String tipo, int numero) {
 		super();
 		this.tipo = tipo;
 		this.numero = numero;
 	}
-
 
 	public double getSaldo() {
 		return saldo;
@@ -91,7 +88,7 @@ public abstract class ContaGeral {
 		System.out.println("Conta: "+this.getNumero()+" - BANK NINE9");
 		System.out.println(this.getTipo());
 		System.out.println("-----------------------");
-		System.out.println("SALDO: "+this.getSaldo());
+		System.out.println("SALDO: R$ "+this.getSaldo());
 	}
 	
 	public void mostraCredDeb(){
@@ -101,6 +98,7 @@ public abstract class ContaGeral {
 		System.out.println("2 - Débito");
 		System.out.println("-----------------------");
 		System.out.println("Digite a opção desejada: ");
+		
 	}
 	
 	public void creditar(double valor) {
@@ -133,4 +131,26 @@ public abstract class ContaGeral {
 		System.out.println("Deseja repetir a operação? S/N:");
 	}
 	
+	public void mostraMenu(){
+		System.out.println("-------- BANK NINE9 ------");
+		System.out.println("---ATRIBUINDO EXPOENTE----");
+		System.out.println("-----AO SEU PATRIMÔNIO----");
+		System.out.println("-----------MENU-----------");
+		System.out.println("1 - Conta Poupança");
+		System.out.println("2 - Conta Corrente");
+		System.out.println("3 - Conta Especial");
+		System.out.println("4 - Conta Empresa");
+		System.out.println("5 - Conta Estudantil");
+		System.out.println("6 - Sair");
+		System.out.println("---------------------------");
+		System.out.println("Digite a opção desejada: ");
+	}
+	
+	public void voltaMenu() {
+		if (this.getRespostaRepeteSN().toLowerCase().equals("n")) {
+			for (int i = 1; i < 2; i++) {
+				break;
+			}
+		}
+	}
 }

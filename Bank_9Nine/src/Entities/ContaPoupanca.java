@@ -41,7 +41,7 @@ public class ContaPoupanca extends ContaGeral {
 		System.out.println("Conta: "+this.getNumero()+" - BANK NINE9");
 		System.out.println(this.getTipo());
 		System.out.println("-----------------------");
-		System.out.println("SALDO: "+this.getSaldo1());
+		System.out.println("SALDO: R$ "+this.getSaldo1());
 	}
 
 	@Override
@@ -86,6 +86,21 @@ public class ContaPoupanca extends ContaGeral {
 			this.setSaldo1(this.getSaldo1()+((this.getSaldo1()*0.05)/100));
 			System.out.println("Reajuste de saldo + 0.05%");
 		}
+	}
+	
+	public void mostraMenu(){
+		System.out.println("-------- BANK NINE9 ------");
+		System.out.println("---ATRIBUINDO EXPOENTE----");
+		System.out.println("-----AO SEU PATRIMÔNIO----");
+		System.out.println("-----------MENU-----------");
+		System.out.println("1 - Conta Poupança");
+		System.out.println("2 - Conta Corrente");
+		System.out.println("3 - Conta Especial");
+		System.out.println("4 - Conta Empresa");
+		System.out.println("5 - Conta Estudantil");
+		System.out.println("6 - Sair");
+		System.out.println("---------------------------");
+		System.out.println("Digite a opção desejada: ");
 	}
 	
 	
