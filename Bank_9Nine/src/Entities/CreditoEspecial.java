@@ -4,6 +4,7 @@ public class CreditoEspecial extends ContaGeral {
 	protected double saldo3;
 	private double lis = 1000;
 	private double diferenca;
+	private double diferenca2;
 	
 	public CreditoEspecial(String tipo, int numero) {
 		super(tipo, numero);
@@ -33,6 +34,16 @@ public class CreditoEspecial extends ContaGeral {
 		this.diferenca = diferenca;
 	}
 	
+	
+	
+	public double getDiferenca2() {
+		return diferenca2;
+	}
+
+	public void setDiferenca2(double diferenca2) {
+		this.diferenca2 = diferenca2;
+	}
+
 	@Override
 	public void mostraHeader() {
 		System.out.println(" ");
@@ -57,6 +68,18 @@ public class CreditoEspecial extends ContaGeral {
 	public void creditar(double valor) {
 		if (valor <= 0) {
 			System.out.println("Insira um valor válido.");
+		} else if (this.getLis() < 1000.00) {
+			this.setDiferenca(1000-this.getLis());
+			if (valor == this.getDiferenca()) {
+				this.setLis(this.getLis()+valor);
+			} else if (valor < this.getDiferenca()) {
+				this.setLis(this.getLis()+valor);
+				this.setDiferenca(this.getDiferenca()-valor);
+			} else if (valor > this.getDiferenca()) {
+				this.setLis(this.getLis()+this.getDiferenca());
+				this.setDiferenca2(valor-this.getDiferenca());
+				this.setSaldo3(this.getDiferenca2());				
+			}
 		} else {
 			this.setSaldo3(getSaldo3()+valor);
 			System.out.println("Crédito no valor R$ "+valor+" feito com sucesso.");
